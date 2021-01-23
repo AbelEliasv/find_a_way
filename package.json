@@ -1,0 +1,12 @@
+{
+  "name": "find_way",
+  "version": "1.0.0",
+  "description": "Busqueda de camino en una matriz",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abel Apablaza Valenzuela",
+  "license": "ISC",
+  "type": "module"
+}
