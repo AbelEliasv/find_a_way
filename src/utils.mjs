@@ -23,12 +23,6 @@ const MOVE_BOX_UP = "c_u"
 const MOVE_BOX_DOWN = "c_d"
 
 
-// RULES
-// 1.- El jugador no puede caminar arriba de la caja (pero si moverla y posicionarse en el espacio)
-// 2.- La caja solo se puede mover si el jugador esta junto a ella
-// 3.- El jugador se puede mover para arriba , abajo izquierda y derecha siempre y cuando se mueve sobre el piso  
-
-
 // SOLUCIÓN
 
 export function find_a_way(warehouse) {
@@ -77,7 +71,7 @@ export function find_a_way(warehouse) {
 
             // MOVIMIENTOS DE CAJA 
 
-            if (comparePositions(firstStep, current_box_position)) {
+            if (comparePositions(firstStep, current_box_position) ) {
 
 
                 if (current_box_position[0] === filaNextStepBox) {
