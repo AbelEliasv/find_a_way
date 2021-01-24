@@ -12,8 +12,21 @@ Buscar la solución a un juego, en que una persona mueve una caja dentro de una 
   
 ## Solución 💡
 
-  La solución propuesta consiste en la creación de dos funciones principales .La primera se encarga en encontrar la ruta del camino  de forma ordenada y la segunda función se encarga en mover el player y caja en las posiciones dadas por la función anterior.
+  La solución propuesta consiste en la creación de dos funciones principales .La primera se encarga de encontrar la ruta del camino  de forma ordenada y la segunda función se encarga de mover el player y caja en las posiciones dadas por la función anterior.
   
-  1. Obtención de ruta 
-    ![screnshot]()
-  2. Recorrido hasta destino
+### Obtención de ruta
+
+Para obtener las posiciones ([x,x]) de la ruta (.) , se itera la matriz hasta encontrar la posision del player (P) . Al encontrar la posicion P , se verifican las posiciones de las casillas alrededor él y compara si alguna piosisión es un camino válido, moviendolo a  la posición  actual de P a la posisión en donde encontro el camino válido.
+  
+Como respuesta se obtiene este array en orden [[x,y],[x,y],[x,y]] 
+
+  
+![alt](https://user-images.githubusercontent.com/29969086/105612592-fcf28b80-5d9b-11eb-950a-717b142c510b.png)
+
+### Recorrido hasta destino
+
+El recorrido hacia el destino se hace posicionandose en cada elemento (step[x,y]) de la ruta. Por cada step[x,y]  se verifica si la columna de step[x,(Y)] es mayor a la columna del player[x,(Y)] para asi moverse a la derecha (p_r), de ser menor se moveria a la izquierda (p_l). 
+
+Para el movimiento arriba y abajo se verifica comparan las filas de p y step.
+
+La misma lógica se aplica para la caja (C).
